@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
+import android.graphics.Paint;
 
 public class Practice3DrawRectView extends View {
 
@@ -25,5 +26,8 @@ public class Practice3DrawRectView extends View {
         super.onDraw(canvas);
 
 //        练习内容：使用 canvas.drawRect() 方法画矩形
+		Paint p = new Paint();
+		p.setStyle(Paint.Style.FILL);
+		canvas.drawRect(100, 100, 500, 500, p);
     }
 }

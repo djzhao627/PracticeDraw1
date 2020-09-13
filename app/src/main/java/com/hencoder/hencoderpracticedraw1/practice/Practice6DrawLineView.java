@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
+import android.graphics.Paint;
 
 public class Practice6DrawLineView extends View {
 
@@ -25,5 +26,8 @@ public class Practice6DrawLineView extends View {
         super.onDraw(canvas);
 
 //        练习内容：使用 canvas.drawLine() 方法画直线
+		Paint p = new Paint(Paint.ANTI_ALIAS_FLAG);
+		p.setStrokeWidth(20);
+		canvas.drawLine(300, 300, 500, 400, p);
     }
 }

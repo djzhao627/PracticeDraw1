@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
+import android.graphics.Paint;
 
 public class Practice7DrawRoundRectView extends View {
 
@@ -25,5 +26,7 @@ public class Practice7DrawRoundRectView extends View {
         super.onDraw(canvas);
 
 //        练习内容：使用 canvas.drawRoundRect() 方法画圆角矩形
+		Paint p = new Paint(Paint.ANTI_ALIAS_FLAG);
+		canvas.drawRoundRect(300, 300, 700, 500, 50, 50, p);
     }
 }

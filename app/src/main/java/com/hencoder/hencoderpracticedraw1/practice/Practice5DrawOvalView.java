@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
+import android.graphics.Paint;
 
 public class Practice5DrawOvalView extends View {
 
@@ -25,5 +26,7 @@ public class Practice5DrawOvalView extends View {
         super.onDraw(canvas);
 
 //        练习内容：使用 canvas.drawOval() 方法画椭圆
+		Paint p = new Paint(Paint.ANTI_ALIAS_FLAG);
+		canvas.drawOval(400, 300, 700, 450, p);
     }
 }

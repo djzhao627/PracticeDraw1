@@ -5,6 +5,8 @@ import android.graphics.Canvas;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
+import android.graphics.Paint;
+import android.graphics.Path;
 
 public class Practice9DrawPathView extends View {
 
@@ -25,5 +27,13 @@ public class Practice9DrawPathView extends View {
         super.onDraw(canvas);
 
 //        练习内容：使用 canvas.drawPath() 方法画心形
+		Paint p = new Paint(Paint.ANTI_ALIAS_FLAG);
+		Path pa = new Path();
+		pa.addArc(250, 250, 350, 350, -225, 225);
+		pa.arcTo(350, 250, 450, 350, -180, 225, false);
+		pa.lineTo(350, 450);
+		//pa.lineTo(250, 300);
+		
+		canvas.drawPath(pa, p);
     }
 }
